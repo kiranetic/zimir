@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
+from typing import List
 from app.db.session import get_db
 from app.users.schemas import UserCreate, UserResponse
 from app.users.crud import (
@@ -14,7 +15,7 @@ router = APIRouter(
     tags=["Users"]
 )
 
-@router.get("/", response_model=list[UserResponse])
+@router.get("/", response_model=List[UserResponse])
 def get_all_users_endpoint(db: Session = Depends(get_db)):
     return get_all_users(db)
 

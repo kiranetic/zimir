@@ -1,7 +1,6 @@
 from sqlalchemy.orm import Session
 from app.users.models import User
-from app.users.schemas import UserCreate, UserResponse
-from datetime import datetime, timezone
+from app.users.schemas import UserCreate
 from typing import List, Optional
 
 def create_user(db: Session, user_data: UserCreate) -> User:
