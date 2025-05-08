@@ -4,3 +4,4 @@ SQLAlchemy
 python-decouple
 psycopg2-binary
 email-validator
+passlib[bcrypt]
