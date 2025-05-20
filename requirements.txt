@@ -6,3 +6,4 @@ psycopg2-binary
 email-validator
 passlib[bcrypt]
 PyJWT
+streamlit
